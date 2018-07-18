@@ -1,0 +1,24 @@
+<div class="container ">
+  <div class="row">
+    <div class="col-10">
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-danger"
+          [ngClass]="{'progress_complete': onProgressDone(item)}" *ngFor="let item of productsList; let i = index">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="radio" (focus)="onChangeProg(i)">
+              </div>
+            </div>
+          <span class="item_number">{{ i + 1 }}.</span>
+          {{ item.productName }}
+          <span class="badge badge-pill badge-success">
+            {{ item.progrListProducts }}
+          </span>
+          <button class="close" aria-label="Close" (click)="onRemoveProd(i)">
+            <img src="https://ru.inettools.net/upload/dIHKqm1A9pbl6Z4bVw6LLMcaQYGuwtknN1AVt1Ns/256-256-486a9b90c52d4de7be5c625acc8836a9.XMqYM.png">
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

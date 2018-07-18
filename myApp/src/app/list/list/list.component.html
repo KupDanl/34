@@ -1,0 +1,22 @@
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <app-itemList 
+          (changeProgress)="onChangeProgress($event)"
+          (removeProduct)="onRemoveProduct($event)"
+          [productsList]="productArr">
+        </app-itemList>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+        <div class="col-10">
+        <app-form
+          (itemAdded)="onAddProduct($event)">
+        </app-form>
+      </div>
+    </div>
+  </div>
+

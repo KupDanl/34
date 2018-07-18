@@ -1,0 +1,16 @@
+<div class="form row alert alert-success" role="alert">
+  <div class="row">
+    <input 
+      type="text"
+      [value]="productName"
+      [ngStyle] = "{'border-color': value ? 'green' : 'red'}"
+      (input)="onInputProductName($event)">
+  </div>
+  <div class="col-4">
+    <button 
+      class="btn btn-success"
+      (click)="onAddProduct()">
+      Add something
+    </button>
+  </div>
+</div>
